@@ -14,3 +14,13 @@
     width: 500px;
     min-height: 300px;
 }
+
+/* List settings */
+ul{
+    /* DEBUG */
+    border: 2px solid black;
+}
+
+ul li{
+    list-style: none;
+}
