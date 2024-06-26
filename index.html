@@ -20,13 +20,13 @@
         <div id="app">
 
             <!-- Input -->
-            <input type="text" placeholder="Inserisci una to-do">
-            <button>Add</button>
+            <input type="text" placeholder="Inserisci una to-do" v-model="inputUser">
+            <button @click="plus">Add</button>
 
             <!-- To do list -->
             <div id="lista">
                 <ul>
-                    <li>Test</li>
+                    <li v-for="toDo in toDoList" :key="toDo.text"> {{ toDo.text }} </li>
                 </ul>
             </div>
         </div>
@@ -34,5 +34,8 @@
     
     <!-- My Script -->
     <script src="script.js"></script>
+
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>
 </html>
