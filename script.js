@@ -8,20 +8,11 @@ createApp({
       // Input vuoto per il salvataggio dell'input
       inputUser: '',
 
+
+
       // Lista degli oggetti
       toDoList: [
-        {
-            text: 'TestTest',
-            done: false
-        },
-        {
-            text: 'TestTest',
-            done: false
-        },
-        {
-            text: 'TestTest',
-            done: false
-        }
+        
       ]
     }
   },
@@ -35,6 +26,26 @@ createApp({
           done: false
         });
         this.inputUser = ''; // Resetta l'input dopo aver aggiunto l'elemento
+
+        // DEBUG
+        console.log(this.index);
+      }
+    },
+    //Rimuovere elementi dalla lista
+    remove(index) { //Assegnazione dell'indice
+      //Togliere l'elemento al clik utente su (X);
+      this.toDoList.splice(index,1);
+    },
+    //Creare una funzione per sbarrare la voce di lista
+    doneBar(index){ //Passare l'indice come argomento
+
+      //Trovare l'elemento da sbarrare tramite Index
+      this.toDoList[index].done = true;
+      console.log(this.toDoList[index]); // Verifica che l'elemento venga aggiornato correttamente
+      if(this.toDoList[index].done === true){
+        //Sbarrare l'elemento indicato
+        let barred = this.toDoList[index].text;
+        
       }
     }
   }

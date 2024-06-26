@@ -20,13 +20,16 @@
         <div id="app">
 
             <!-- Input -->
-            <input type="text" placeholder="Inserisci una to-do" v-model="inputUser">
-            <button @click="plus">Add</button>
+            <div class="flexed">
+                <input type="text" placeholder="Inserisci una to-do" v-model="inputUser">
+                <button @click="plus" @keyup.enter="plus">Add</button>
+            </div>
+                
 
             <!-- To do list -->
             <div id="lista">
                 <ul>
-                    <li v-for="toDo in toDoList" :key="toDo.text"> {{ toDo.text }} </li>
+                    <li v-for="(toDo,index) in toDoList" :key="index"><button @click="doneBar(index)">Y</button> {{ toDo.text }} <button @click="remove(index)">X</button> </li>
                 </ul>
             </div>
         </div>

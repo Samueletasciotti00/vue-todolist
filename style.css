@@ -17,10 +17,23 @@
 
 /* List settings */
 ul{
+    text-align: center;
     /* DEBUG */
     border: 2px solid black;
 }
 
 ul li{
     list-style: none;
+}
+
+/* Flex for inputs */
+.flexed{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Line for text */
+.lined{
+    text-decoration-line: line-through;
 }
