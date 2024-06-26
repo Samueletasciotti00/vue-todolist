@@ -29,7 +29,10 @@
             <!-- To do list -->
             <div id="lista">
                 <ul>
-                    <li :class="{ lined: toDo.done }" v-for="(toDo,index) in toDoList" :key="index"><button @click="doneBar(index)">Y</button> {{ toDo.text }} <button @click="remove(index)">X</button> </li>
+                    <!-- (toDo,index), per creare ogni singolo elemento della lista(li) -->
+                        <!-- V-bind(Per inserire la classe 'LINED' al singolo elemento) -->
+                            <!-- Click su 'X' per la rimozione del singolo (li) -->
+                    <li :class="{ lined: toDo.done }" v-for="(toDo,index) in toDoList" :key="index"><button class="lined_btn" @click="doneBar(index)">Y</button> {{ toDo.text }} <button class="remove_btn" @click="remove(index)">X</button> </li>
                 </ul>
             </div>
         </div>

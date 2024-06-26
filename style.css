@@ -18,12 +18,14 @@
 /* List settings */
 ul{
     text-align: center;
-    /* DEBUG */
-    border: 2px solid black;
 }
 
 ul li{
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border-bottom: 2px solid;
 }
 
 /* Flex for inputs */
@@ -36,4 +38,17 @@ ul li{
 /* Line for text */
 .lined{
     text-decoration-line: line-through;
+}
+
+/* Button setting */
+button.lined_btn{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: lightgreen;
+}
+
+button.remove_btn{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: tomato;
 }
