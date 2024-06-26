@@ -29,7 +29,7 @@
             <!-- To do list -->
             <div id="lista">
                 <ul>
-                    <li v-for="(toDo,index) in toDoList" :key="index"><button @click="doneBar(index)">Y</button> {{ toDo.text }} <button @click="remove(index)">X</button> </li>
+                    <li :class="{ lined: toDo.done }" v-for="(toDo,index) in toDoList" :key="index"><button @click="doneBar(index)">Y</button> {{ toDo.text }} <button @click="remove(index)">X</button> </li>
                 </ul>
             </div>
         </div>

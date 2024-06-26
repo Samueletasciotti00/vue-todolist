@@ -8,7 +8,8 @@ createApp({
       // Input vuoto per il salvataggio dell'input
       inputUser: '',
 
-
+      //Class per sbarrare
+      classe: '',
 
       // Lista degli oggetti
       toDoList: [
@@ -41,12 +42,6 @@ createApp({
 
       //Trovare l'elemento da sbarrare tramite Index
       this.toDoList[index].done = true;
-      console.log(this.toDoList[index]); // Verifica che l'elemento venga aggiornato correttamente
-      if(this.toDoList[index].done === true){
-        //Sbarrare l'elemento indicato
-        let barred = this.toDoList[index].text;
-        
-      }
     }
   }
 }).mount('#app');
