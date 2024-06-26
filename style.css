@@ -1,0 +1,16 @@
+/* Default reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container settings */
+#container{
+
+    margin: 50px auto;
+    /* DEBUG */
+    border: 2px solid red;
+    width: 500px;
+    min-height: 300px;
+}
